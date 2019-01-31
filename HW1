@@ -18,13 +18,13 @@ public class ArrayHW1
    public static void print1DArray(int[] a)
    {
      for(int val : a)
-       System.out.print(val + " ");
+       System.out.print(val + " "); 
    }
    
    //Use this method to print 2D arrays of ints
    public static void print2DArray(int[][] a)
    {
-     for(int[] val : a)
+     for(int[] val : a) 
      {
        for(int i : val)
          System.out.print(i + " ");
@@ -32,9 +32,9 @@ public class ArrayHW1
      }
    }
    //To be done in task 1 (uncomment when completed)
-   public static int oddCount1D(int[] a)
+   public static int oddCount1D(int[] a) // counts number of odds in 1D array
    {
-       int count = 0;
+       int count = 0; 
      for(int val : a)
      {
              if (val % 2 != 0)
@@ -44,7 +44,7 @@ public class ArrayHW1
    }
    
    
-   public static int oddCount2D(int[][] a)
+   public static int oddCount2D(int[][] a) // counts number of odds in 2D array
    {
      int count = 0; 
        for(int[] val : a)
@@ -58,7 +58,7 @@ public class ArrayHW1
 
    
    // To be done in task 2
-    public static void upToNine1D(int[] a)
+    public static void upToNine1D(int[] a) // changes all values >= 5, to 9
     {
      for (int i = 0; i < a.length; i++)
      {
@@ -67,7 +67,7 @@ public class ArrayHW1
      }
     }
     
-    public static void upToNine2D(int[][] a)
+    public static void upToNine2D(int[][] a) // chages all values >= 5, to 9
     {
         for (int i = 0; i < a.length; i++)
         {
@@ -80,7 +80,7 @@ public class ArrayHW1
     }
     
     // To be done in Task 3
-    public static int[] removeDiv3(int [] a)
+    public static int[] removeDiv3(int [] a) // removes all numbers divisble by 3
     {
         int count = 0; 
         for (int i = 0; i < a.length; i++)
