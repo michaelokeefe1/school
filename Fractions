@@ -1,0 +1,91 @@
+
+public class Fraction
+{
+  private int num, denom;
+  
+  public Fraction()
+  {
+    num = 0;
+    denom = 1;
+  }
+  
+  public Fraction(int a)
+  {
+    num = a;
+    denom = 1;
+  }
+  
+  public Fraction(int a, int b)
+  {
+    num = a;
+    denom = b;
+  }
+  
+  public int getNum()
+  {
+    return num;
+  }
+
+  public void setNum(int num)
+  {
+    this.num = num;
+  }
+
+  public int getDenom()
+  {
+    return denom;
+  }
+
+  public void setDenom(int denom)
+  {
+    this.denom = denom;
+  }
+  
+  public Fraction getInverse()
+  {
+   return new Fraction(denom, num); 
+  }
+
+  public Fraction add(int a)
+  {
+    return new Fraction(num + denom * a, denom);
+  }
+  
+  public Fraction multiply(int a)
+  {
+    return new Fraction(num * a, denom);
+  }
+ 
+  public Fraction add(Fraction a)
+  {
+    return new Fraction(num * a.getDenom() + denom * a.getNum(), denom * getDenom());
+  }
+  
+  public Fraction multiply(Fraction a)
+  {
+    return new Fraction(num * a.getNum(), denom * a.getDenom());
+  }
+  
+  public Fraction divide(Fraction a)
+  {
+    return multiply(a.getInverse());
+  }
+  
+  public Fraction reduce()
+  {
+    for (int i = Math.min(num,denom); i >= 2; i-- )
+    {
+      if (num % i == 0 && denom % i == 0)
+      {
+        return new Fraction(num / i, denom / i);
+      }
+    }
+    return this;
+  }
+  
+  public String toString()
+  {
+    return num + "/" + denom;
+  }
+
+}
