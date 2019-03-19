@@ -1,0 +1,62 @@
+
+
+import java.util.List; // required interface
+import java.util.ArrayList; // class we are going to use
+
+public class LineList
+{
+  ArrayList<String> lines;
+  
+  public LineList()
+  {
+    lines = new ArrayList<String>();
+  }
+  
+  public int size()
+  {
+    return lines.size();
+  }
+  
+  public String get(int k)
+  {
+    return lines.get(k);
+  }
+  
+  public void add(String line)
+  {
+    lines.add(line);
+  }
+  
+  public String remove(int k)
+  {
+    String a = lines.get(k);
+    lines.remove(k);
+    return a;
+  }
+  
+  public void move(int index, int newIndex)
+  {
+    String a = lines.get(index);
+    lines.remove(index);
+    lines.add(newIndex, a);
+  }
+  
+  
+  public void swap()
+  {
+    int a = (int)(Math.random() * lines.size() -1 ); 
+    int b = (int)(Math.random() * lines.size() -1);
+    String one = lines.get(a);
+    String two = lines.get(b);
+    lines.set(b, one);
+    lines.set(a,two);
+  }
+  public void shuffle()
+  {
+    for (int n = lines.size(); n>2; n--)
+    {
+      swap();
+    }
+  }
+  
+}
