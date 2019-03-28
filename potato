@@ -1,0 +1,30 @@
+
+public class Potato
+{
+  boolean isSweet;
+  
+  public Potato(String a, boolean b)
+  {
+    super(a);
+    isSweet = b;
+  }
+  
+  public String pick()
+  {
+    picked = true;
+    return "Your Potato is no longer in the ground";
+  }
+  
+  public void expire()
+  {
+    daysLeft = 0;
+    color = "bad";
+    System.out.println("Your potato is gross");
+  }
+  
+  public void peel()
+  {
+    System.out.println("making mashed potatos?");
+    
+  }
+}
