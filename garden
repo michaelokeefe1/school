@@ -1,0 +1,19 @@
+
+public class Garden
+{
+  public static void main(String [] args)
+  {
+    Carrots c1 = new Carrots("Jimmy",12);
+    Potato p1 = new Potato("Guac", false);
+    
+    System.out.println(c1.pick());
+    System.out.println(c1.expire());
+    System.out.println(c1.makeBaby());
+    
+    System.out.println(p1.pick());
+    System.out.println(p1.expire());
+    System.out.println(p1.peel());
+
+  }
+}
+
