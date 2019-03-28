@@ -1,0 +1,42 @@
+
+public class Carrots
+{
+  boolean bunch;
+  int howMany;
+  
+  public Carrots(String a, int b)
+  {
+    super(a);
+    howMany = b;
+    if (b > 0)
+    {
+      bunch = true;
+    }
+  }
+  
+  public String pick()
+  {
+    picked = true;
+    return "Your carrott was plucked";
+  }
+  
+  public void expire()
+  {
+    daysLeft = 0;
+    color = "bad";
+    if (bunch == true)
+    {
+      System.out.println("Your carrots are gross");
+    }
+    else 
+    {
+      System.out.println("Your carrot is gross");
+    }
+    
+  }
+  
+  public String makeBaby()
+  {
+    return "now we arebaby carrots :)";
+  }
+}
