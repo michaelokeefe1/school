@@ -1,0 +1,39 @@
+
+public abstract class Vegetable
+{
+ public String name;
+ public String color;
+ public  boolean picked;
+ public int daysLeft;
+ public double weight;
+  
+  public Vegetable(String a)
+  {
+    name = a;
+    color = "good";
+    picked = false;
+    daysLeft = 21;
+    weight = 3;
+  }
+  
+  public Vegetable()
+  {
+    name = "Meh";
+    color = "eh";
+    picked = false;
+    daysLeft = 14;
+    weight = 6;
+  }
+  
+  public abstract String pick();
+  public abstract String expire();
+  {
+    daysLeft = 0;
+    color = "bad";
+  }
+  public String getName()
+  {
+    return name;
+  }
+  
+}
