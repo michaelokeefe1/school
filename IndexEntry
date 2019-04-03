@@ -1,0 +1,36 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class IndexEntry
+{
+  private String word;
+  private ArrayList<Integer> numsList;
+  
+  public IndexEntry(String a)
+  {
+    word = a.toUpperCase();
+    numsList = new ArrayList<Integer>();
+  }
+  
+  public void add(int num)
+  {
+    if (numsList.indexOf(num) < 0)
+    {
+      numsList.add(num);
+    }
+  }
+  
+  public String getWord()
+  {
+    return word;
+  }
+  
+  public String toString()
+  {
+    String s = word + " ";
+    for (Integer i : numsList)
+      s+= i +", ";
+    s=s.substring(0,s.length()-2);
+    return s;
+  }
+}
