@@ -1,0 +1,32 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class DocumentIndex extends ArrayList<IndexEntry>
+{
+  public DocumentIndex()
+  {
+    super();
+  }
+  
+  public DocumentIndex(int a)
+  {
+    super(a);
+  }
+  
+  void addWord(String str, int num)
+  {
+    //pg 330 #1 
+  }
+  
+  void addAllWords(String str, int num)
+  {
+    String[] a = str.split("//W+");
+    for (String b : a)
+    {
+      if (b != "")
+      addWord(b, num);
+    }
+      
+  }
+  
+}
