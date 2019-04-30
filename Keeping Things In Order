@@ -1,0 +1,37 @@
+
+import java.util.ArrayList;
+
+public class SortedWordList extends ArrayList<String>
+{
+  public ArrayList<String> list;
+  
+  public SortedWordList()
+  {
+    list = new ArrayList<String>(10);
+  }
+  
+  public SortedWordList(int n)
+  {
+    list = new ArrayList<String>(n);
+  }
+  
+  public int contains(String a)
+  {
+    if (BinarySearch.find(a) > 0)
+    {
+      return 1; 
+    }
+    return -1;
+  }
+  
+  public int indexOf(String a)
+  {
+    return BinarySearch.find(a);
+  }
+  
+  public void set(int i, String word)
+  {
+    String a = list[i+1];
+    String b = list[i-1];
+  }
+}
