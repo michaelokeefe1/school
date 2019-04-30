@@ -1,0 +1,35 @@
+
+public class ArrayReview
+{
+  public static void main(String[] args)
+  {
+    String[][] seatingChart = {{"0","0", "Tyler", "Annie", "Declan", "Michael"},{"0","0","0","0","0","Steve"}, 
+        {"Win","0","Brady","Kyle","Finn","Nate"}, {"Anders", "0","Gibby","Nick","Jeff","Addie"}};
+    
+    for (int r = 0; r < seatingChart.length; r++)
+    {
+      System.out.println();
+      for (int c = 0; c < seatingChart[0].length; c++)
+      {
+        System.out.print(seatingChart[r][c]);
+        System.out.print(" , ");
+      }
+    }
+    System.out.println();
+   System.out.println(randomStudent(seatingChart));
+  }
+  
+  public static String randomStudent(String[][] seatingChart)
+  {
+    int r = (int) (Math.random()*seatingChart.length);
+    int c = (int) (Math.random()*seatingChart[0].length);
+    
+    while (seatingChart[r][c].equals("0"))
+    {
+      System.out.println("That one's empty. Trying again...");
+      return randomStudent(seatingChart);
+    }
+   return seatingChart[r][c];
+    
+  } 
+}
